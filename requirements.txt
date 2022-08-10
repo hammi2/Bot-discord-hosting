@@ -1,0 +1,4 @@
+discord==1.7.3
+jose==1.0.0
+typing==3.7.4.3
+easy_pil==0.1.6
