@@ -31,7 +31,7 @@ async def on_command_error(ctx, error):
         print("error")
         await ctx.send(" you code is failed")
      
- @bot.command()
+@bot.command()
 async def servers(ctx):
     embed = discord.Embed(color=discord.Color.red())
     embed.add_field(name=f'Servers({len(bot.guilds)})',value=f"".join(f"**{i}** `({i.member_count})` \n"for i in bot.guilds))
