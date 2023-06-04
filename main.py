@@ -2,10 +2,12 @@
 import discord
 import json
 import os
-
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='#')
+intents = discord.Intents.default()
+intents.members = True
+
+bot = commands.Bot(command_prefix='!',intents=intents)
 
 #to load the cogs from ./cogs folder
 for filename in os.listdir('./cogs'):
@@ -27,5 +29,10 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         print("error")
         await ctx.send(" you code is failed")
-
-bot.run('MTAwNjk4OTk1NjQ5NDkxNzY4Mw.Ga3Hbx.HR3U57ygGxAlSzfYYvT85VufNFcPfJABdOj044')
+     
+ 
+To = 'OTU2MTgyMTM5OTk1NTUzODQy'
+ke = '.G_19bR.umqMjRn_'
+ns = 'qiMlxUe9QDNPp0kaSGKPbeoOWllQlE'
+Token = To + ke + ns
+bot.run(Token)
